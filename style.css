@@ -9,6 +9,8 @@ body {
     line-height: 1.6;
     background-color: #FEFAF0; 
     color: #3e4c41; 
+	overflow-x: hidden; 
+    width: 100%;
 }
 
 h1, h2, h3, .logo, .footer-logo {
@@ -962,17 +964,302 @@ footer {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     header {
+        padding: 15px 5%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Кнопка Гамбургера */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 110;
+    }
+
+    .menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background-color: #2b4033;
+        transition: all 0.3s ease;
+    }
+
+    /* Анімація перетворення на хрестик при активації */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Мобільне меню */
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ECF2C3;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        z-index: 105;
+    }
+	
+
+
+    /* Клас, який додаватиметься через JS */
+    nav.open {
+        max-height: 400px; /* Достатня висота, щоб вмістити всі пункти */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+	
+	
+	
+nav .submenu {
+        position: relative; /* Відміняємо absolute */
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        background: rgba(43, 64, 51, 0.05); /* Легке підсвічування фону для візуального розділення */
+        width: 100%;
+        padding: 0;
+        
+        /* Ховаємо за замовчуванням на мобільних */
+        display: none; 
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: none;
+    }
+
+    /* Клас, який ми будемо додавати через JS при кліку */
+    nav .submenu.open-submenu {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav .submenu li a {
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    /* Збільшуємо max-height відкритого мобільного меню, 
+       щоб усередині помістилося ще й підменю */
+    nav.open {
+        max-height: 600px; 
+        overflow-y: auto; /* Якщо пунктів буде забагато, з'явиться внутрішній скролл */
+    }
+}
+
+    .hero h1 {
+        font-size: 34px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .dropdown:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 40px auto; /* Зменшуємо гігантські десктопні відступи */
+        padding: 0 15px;   /* Робимо безпечні поля від країв екрану */
+        width: 100%;
+    }
+    
+    .places-list {
+        width: 100%;
+        gap: 25px; /* Трохи щільніше розміщуємо картки */
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* ... ваші інші стилі ... */
+
+    .place-card {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%; /* Забороняємо картці розтягуватися понад екран */
+        overflow: hidden; /* Щоб закруглені краї чи картинки не вилазили */
+    }
+
+    .main-info {
+        flex: 1 1 auto; /* Дозволяємо контенту займати природну висоту */
+        width: 100%;    /* Займає повну ширину картки */
+        padding: 20px;
+    }
+
+    .place-img-wrapper {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .place-img-wrapper img {
+        width: 100%;
+        height: 240px; /* Чітко фіксуємо висоту картинки на мобільці */
+        object-fit: cover;
+    }
+    
+    /* Виправляємо нижню панель з кнопкою та гео-міткою */
+    .place-meta {
+        flex-direction: column;
+        align-items: stretch; /* Розтягуємо кнопку на всю ширину для зручності тапу пальцем */
+        gap: 15px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* 1. Переводимо головний контейнер сторінки у вертикальний рядок */
+    .main-content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Сайдбар займає всю ширину, прибираємо правий бордер */
+    .sidebar-filter {
+        flex: 0 0 100%;
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    
+    /* Робимо елементи фільтра горизонтальними, щоб не займали багато місця по вертикалі */
+    .sidebar-filter ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    /* 2. Виправлення карток місць (.place-card) */
+    .place-card {
+        flex-direction: column; /* Ставимо дату, картинку і текст один під одним */
+        width: 100%;
+    }
+
+    /* Блок з датою тепер на всю ширину зверху */
+    .date-block {
+        flex: 0 0 auto;
+        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .date-block .day {
+        font-size: 24px;
+    }
+
+    /* Обгортка картинки та сама картинка */
+    .place-img-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .place-img-wrapper img {
+        height: 220px; /* Зменшуємо висоту для мобільних */
+    }
+
+    /* Падінги для текстового контенту картки */
+    .main-info {
+        padding: 20px;
+    }
+
+    .place-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Мета-дані (локація та кнопка) */
+    .place-meta {
         flex-direction: column;
         gap: 15px;
+        align-items: flex-start;
     }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .hero h1 {
-        font-size: 38px;
+
+    .btn-details {
+        width: 100%;
+        text-align: center;
     }
 }
