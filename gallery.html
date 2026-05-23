@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Мій Львів</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Логотип Мій Львів" class="logo-img">
+                <span>Мій Львів</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="history.html">Історія Львова</a></li>
+                <li class="dropdown">
+                    <a href="places.html">Цікаві місця</a>
+                    <ul class="submenu">
+                        <li><a href="places.html?category=Парки">Парки</a></li>
+                        <li><a href="places.html?category=Заклади">Заклади</a></li>
+                        <li><a href="places.html?category=Архітектура">Архітектура</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Про нас</a></li>
+                <li class="dropdown">
+                    <a href="gallery.html">Галерея</a>
+                    <ul class="submenu">
+						<li><a href="gallery.html?category=photo">Фотографії</a></li>
+                        <li><a href="gallery.html?category=video">Відео</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+    <h1 class="page-title">Медіа-галерея</h1>
+
+    <div class="main-content-wrapper">
+        <aside class="sidebar-filter">
+            <h2>Тип контенту</h2>
+            <ul>
+                <li class="active" data-filter="all"><a href="#">Всі матеріали</a></li>
+                <li data-filter="photo"><a href="#">Фотографії</a></li>
+                <li data-filter="video"><a href="#">Відео</a></li>
+            </ul>
+        </aside>
+
+        <section class="gallery-pure-grid">
+            
+            <article class="gallery-item-clean" data-category="photo" 
+                     data-title="Домініканський собор зимою" 
+                     data-description="Власна фотографія">
+                <div class="img-container">
+                    <img src="img/gallery_1.jpeg" alt="Домініканський собор">
+                </div>
+            </article>
+
+            <article class="gallery-item-clean" data-category="video" 
+                     data-title="Стрийський парк" 
+                     data-description="Власна Відео">
+                <div class="img-container video-overlay">
+					<video src="img/gallery.mp4" class="gallery-video-preview" muted loop></video>
+				<div class="play-icon">▶</div>
+				</div>
+            </article>
+			
+			<article class="gallery-item-clean" data-category="photo" 
+                     data-title="Сніданок в Grand Cafe Leopolis" 
+                     data-description="Власна фотографія">
+                <div class="img-container">
+                    <img src="img/gallery_4.jpg" alt="ЇЖА">
+                </div>
+            </article>
+			
+			<article class="gallery-item-clean" data-category="video" 
+                     data-title="Стрийський парк" 
+                     data-description="Відео-прогулянка Стрийським парком. Всласне Відео">
+                <div class="img-container video-overlay">
+					<video src="img/gallery_1.mp4" class="gallery-video-preview" muted loop></video>
+				<div class="play-icon">▶</div>
+				</div>
+            </article>
+
+            <article class="gallery-item-clean" data-category="photo" 
+                     data-title="Весняний Стрийський парк" 
+                     data-description="Власна фотографія">
+                <div class="img-container">
+                    <img src="img/gallery_2.jpg" alt="Парк">
+                </div>
+            </article>
+			
+			<article class="gallery-item-clean" data-category="photo" 
+                     data-title="Захід сонця" 
+                     data-description="Власне фото">
+                <div class="img-container">
+                    <img src="img/gallery_3.jpeg" alt="Львів">
+                </div>
+            </article>
+
+        </section>
+    </div>
+</main>
+
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    
+    <button id="modal-prev" class="nav-arrow">&#10094;</button>
+    <button id="modal-next" class="nav-arrow">&#10095;</button>
+
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+        <video id="lightbox-video" controls style="display:none;"></video>
+        <div class="lightbox-caption">
+            <h3 id="caption-title"></h3>
+            <p id="caption-text"></p>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Мій Львів</div>
+            <p>Місто, що захоплює і надихає</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Мій Львів. Всі права захищені.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

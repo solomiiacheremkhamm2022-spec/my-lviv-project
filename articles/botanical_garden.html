@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ботанічний сад - Мій Львів</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Логотип Мій Львів" class="logo-img">
+                <span>Мій Львів</span>
+            </a>
+        </div>
+		 <nav>
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../history.html">Історія Львова</a></li>
+				<li class="../dropdown current-page">
+					<a href="../places.html">Цікаві місця</a>
+						<ul class="submenu">
+							<li><a href="../places.html?category=Парки">Парки</a></li>
+							<li><a href="../places.html?category=Заклади">Заклади</a></li>
+							<li><a href="../places.html?category=Архітектура">Архітектура</a></li>
+						</ul>
+				</li>
+                <li><a href="../about.html">Про нас</a></li>
+                <li class="../dropdown">
+					<a href="../gallery.html">Галерея</a>
+					<ul class="submenu">
+						<li><a href="../gallery.html?category=photo">Фотографії</a></li>
+                        <li><a href="../gallery.html?category=video">Відео</a></li>
+					</ul>
+				</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="article-container">
+       <div class="article-visuals">
+    <div class="main-article-img">
+        <img src="../img/places_7.jpg" alt="Ботанічний сад" id="main-view" class="main-img-click">
+    </div>
+    
+    <div class="article-gallery-wrapper">
+        <button class="nav-arrow" id="prev-btn">◀</button>
+        <div class="mini-gallery" id="thumb-container">
+            <img src="../img/places_7.jpg" alt="фото 1" class="thumb active-thumb">
+            <img src="../img/places_5.jpg" alt="фото 2" class="thumb">
+            <img src="../img/places_6.jpg" alt="фото 3" class="thumb">
+        </div>
+        <button class="nav-arrow" id="next-btn">▶</button>
+    </div>
+	
+        <div class="back-container">
+			<a href="../places.html" class="btn-back">← Повернутися назад</a>
+		</div>
+</div>
+
+
+<div id="article-lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    
+    <button class="nav-arrow lightbox-prev" id="modal-prev">◀</button>
+    <button class="nav-arrow lightbox-next" id="modal-next">▶</button>
+
+    <div class="lightbox-wrapper">
+        <img class="lightbox-content" id="modal-img">
+        <div class="lightbox-caption">
+            <h3 id="caption-title"></h3>
+            <p id="caption-text"></p>
+        </div>
+    </div>
+</div>
+
+
+
+			<div class="article-content">
+				<h1 class="article-title">Ботанічний сад</h1>
+				<div class="article-text">
+                <p>Усім, хто захоплюється рослинами та любить природу, я раджу відвідати незабутню локацію, розташовану на вулиці Черемшини.</p>
+				<p>Це особливе місце, яке варто відвідати кожному, хто цінує спокій та природну красу. Тут немає міської метушні, натомість є можливість прогулятися доглянутими алеями серед рідкісних рослин.</p>
+                <p>Особливо приємно приходити сюди навесні та влітку. Коли розцвітають магнолії, рододендрони або колекція півників, територія виглядає дуже привабливо та охайно. Оранжереї саду дозволяють побачити екзотичні види, які не зустрінеш у звичайних парках, а продумані маршрути роблять прогулянку змістовною. Різнобарвність рослинного світу розбурхує уяву та спонукає до творчості.</p>
+                <p>Це місце чудово підходить для тихого відпочинку, читання книги на лавці або естетичної фотосесії. Сад виглядає доглянутим, а різноманіття дерев і квітів створює приємну атмосферу в будь-яку пору року.</p>
+				<p>Якщо ви шукаєте затишну локацію з особливим настроєм у межах міста, цей сад однозначно заслуговує на вашу увагу.</p>
+            </div>
+			</div>
+
+    </main>
+
+
+<section class="full-width-map">
+        <div class="map-container-inner">
+            <h2 class="map-heading">Місцезнаходження Ботанічного саду</h2>
+            <p class="map-address">м. Львів, вул. Черемшини, 44</p>
+        </div>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.136894371457!2d24.05389647685903!3d49.83988773113171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add500350917f%3A0xc3c51121d596489b!2z0JHQvtGC0LDQvdGW0YfQvdC40Lkg0YHQsNC0INCb0YzQstGW0LLRgdGM0LrQvtCz0L4g0YPQvdGW0LLQtdGA0YHQuNGC0LXRgtGDINGW0LwuINCf0LXRgtGA0LAg00L7QvdC-0LLQsA!5e0!3m2!1suk!2sua!4v1715416000000!5m2!1suk!2sua" 
+            width="100%" 
+            height="450" 
+            style="border:0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+
+
+
+     <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Мій Львів</div>
+            <p>Надихає на життя ближче до природи</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Мій Львів. Всі права захищені.</p>
+        </div>
+    </footer>
+
+	<script src="script.js"></script>
+</body>
+</html>

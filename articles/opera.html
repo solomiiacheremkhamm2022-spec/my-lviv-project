@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Львівська опера</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Логотип Мій Львів" class="logo-img">
+                <span>Мій Львів</span>
+            </a>
+        </div>
+		 <nav>
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../history.html">Історія Львова</a></li>
+				<li class="../dropdown current-page">
+					<a href="../places.html">Цікаві місця</a>
+						<ul class="submenu">
+							<li><a href="../places.html?category=Парки">Парки</a></li>
+							<li><a href="../places.html?category=Заклади">Заклади</a></li>
+							<li><a href="../places.html?category=Архітектура">Архітектура</a></li>
+						</ul>
+				</li>
+                <li><a href="../about.html">Про нас</a></li>
+                <li class="../dropdown">
+					<a href="../gallery.html">Галерея</a>
+					<ul class="submenu">
+						<li><a href="../gallery.html?category=photo">Фотографії</a></li>
+                        <li><a href="../gallery.html?category=video">Відео</a></li>
+					</ul>
+				</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="article-container">
+       <div class="article-visuals">
+    <div class="main-article-img">
+        <img src="../img/places_8.jpg" alt="Опера" id="main-view" class="main-img-click">
+    </div>
+    
+    <div class="article-gallery-wrapper">
+        <button class="nav-arrow" id="prev-btn">◀</button>
+        <div class="mini-gallery" id="thumb-container">
+            <img src="../img/places_8.jpg" alt="фото 1" class="thumb active-thumb">
+            <img src="../img/places_9.jpg" alt="фото 2" class="thumb">
+            <img src="../img/places_10.jpeg" alt="фото 3" class="thumb">
+        </div>
+        <button class="nav-arrow" id="next-btn">▶</button>
+    </div>
+	
+        <div class="back-container">
+			<a href="../places.html" class="btn-back">← Повернутися назад</a>
+		</div>
+</div>
+
+
+<div id="article-lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    
+    <button class="nav-arrow lightbox-prev" id="modal-prev">◀</button>
+    <button class="nav-arrow lightbox-next" id="modal-next">▶</button>
+
+    <div class="lightbox-wrapper">
+        <img class="lightbox-content" id="modal-img">
+        <div class="lightbox-caption">
+            <h3 id="caption-title"></h3>
+            <p id="caption-text"></p>
+        </div>
+    </div>
+</div>
+
+
+
+			<div class="article-content">
+				<h1 class="article-title">Львівська Національна Опера</h1>
+				<div class="article-text">
+				<p>Це місце варто відвідати кожному, кому не байдужий Львів. Дуже люблю його і захоплююсь ним. Львівська опера - гордість міста Лева, осередок культури і мистецтва.</p>
+                <p>Повна офіційна назва театру – Львівський національний академічний театр опери та балету імені Соломії Крушельницької.</p>
+                <p>Він є центральною архітектурною спорудою головного проспекту міста. Будівля зведена у стилі неоренесансу з елементами бароко, що проявляється у симетричних формах фасаду та насиченому скульптурному оформленні.</p>
+                <p>Внутрішні стіни театру приховують безліч цікавих фактів та легенд. Це місце насичене історією, архітектурою та мистецтвом. Загадкові куточки та розкішні зали, кришталеві люстри та вишуканий інтер’єр – все це відкриється перед вами, коли ви відвідаєте театр.</P>
+				<p>Внутрішній простір театру переносить відвідувача у світ неймовірної розкоші, де кожен елемент інтер’єру є самостійним шедевром. Парадні сходи, витесані з різнокольорового мармуру, ведуть до дзеркального фойє, яке завдяки оптичній грі відображень здається безмежним палацом із золота та світла. 
+				Стіни та стелі прикрашені майстерними розписами та позолоченою ліпниною, що мерехтить у променях масивної кришталевої люстри. Глядацька зала у формі ліри зачаровує своїми чотирма ярусами балконів, кожен з яких інкрустований витонченим декором. Це архітектурне середовище створює особливу атмосферу піднесеності, де камінь, метал і живопис зливаються в єдину симфонію краси, здатну вразити навіть найвибагливішого поціновувача естетики.</p>
+				<p>Відвідавши це місце, ви запам’ятаєте його назавжди!</p>
+			</div>
+			</div>
+
+    </main>
+
+<section class="full-width-map">
+        <div class="map-container-inner">
+            <h2 class="map-heading">Місцезнаходження: Львівська Опера</h2>
+            <p class="map-address">м. Львів, проспект Свободи, 28</p>
+        </div>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.846549247385!2d24.02364407685934!3d49.84348123074154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7196696515%3A0x6e9f28687a414995!2z0JvRjNCy0ZbQstGB0YzQutC40Lkg0L3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INCw0LrQsNC00LXQvNGW0YfQvdC40Lkg0YLQtdCw0YLRgCDQvtC_0LXRgNC4INGC0LAg0LHQsNC70LXRgtGDINGW0LzQtdC90Z0g0KHQvtC70L7QvNGW0Zcg0JrRgNGD0YjQtdC70YzQvdC40YbRjNC60L7Rly4!5e0!3m2!1suk!2sua!4v1715417000000!5m2!1suk!2sua" 
+            width="100%" 
+            height="450" 
+            style="border:0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+     <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Мій Львів</div>
+            <p>Надихає на життя ближче до природи</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Мій Львів. Всі права захищені.</p>
+        </div>
+    </footer>
+
+	<script src="script.js"></script>
+</body>
+</html>

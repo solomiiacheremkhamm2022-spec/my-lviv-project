@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цікаві місця Львова</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/logo.png" alt="Логотип Мій Львів" class="logo-img">
+            <span>Мій Львів</span>
+        </a>
+		</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="history.html">Історія Львова</a></li>
+				<li class="dropdown current-page">
+					<a href="places.html">Цікаві місця</a>
+						<ul class="submenu">
+							<li><a href="places.html?category=Парки">Парки</a></li>
+							<li><a href="places.html?category=Заклади">Заклади</a></li>
+							<li><a href="places.html?category=Архітектура">Архітектура</a></li>
+						</ul>
+				</li>
+                <li><a href="about.html">Про нас</a></li>
+                <li class="dropdown">
+					<a href="gallery.html">Галерея</a>
+					<ul class="submenu">
+						<li><a href="gallery.html?category=photo">Фотографії</a></li>
+                        <li><a href="gallery.html?category=video">Відео</a></li>
+					</ul>
+				</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <h1 class="page-title">Цікаві місця Львова</h1>
+
+        <div class="main-content-wrapper">
+            
+            <aside class="sidebar-filter">
+    <h2>Категорії</h2>
+    <ul>
+        <li class="active" data-filter="all"><a href="#">Всі місця</a></li>
+        <li data-filter="Архітектура"><a href="#">Архітектура</a></li>
+        <li data-filter="Парки"><a href="#">Парки та сади</a></li>
+        <li data-filter="Заклади"><a href="#">Заклади харчування</a></li>
+    </ul>
+			</aside>
+		
+				<section class="places-list">
+                
+				<article class="place-card" data-category="Архітектура">
+                    <div class="main-info">
+                        <span class="place-category">Архітектура</span>
+                        <h2 class="place-title">Дім Франка</h2>
+                        <div class="place-img-wrapper">
+                            <img src="img/places_2.jpg" alt="Дім Франка">
+                        </div>
+                        <p class="place-excerpt">Це місце, де розквітають магнолії та оживають слова, запрошуючи кожного в музей-садибу</p>
+                        <div class="place-meta">
+                            <span class="place-location"><i class="pin-icon">📍</i> вул. Івана Франка, 150/152</span>
+                            <a href="articles/franko.html" class="btn-details">ДЕТАЛІ →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="place-card" data-category="Парки">
+                    <div class="main-info">
+                        <span class="place-category">Парки</span>
+                        <h2 class="place-title">Ботанічний сад</h2>
+                        <div class="place-img-wrapper">
+                            <img src="img/places_7.jpg" alt="Ботанічний сад">
+                        </div>
+                        <p class="place-excerpt">Мальовничий живий музей просто неба, де можна побачити екзотичні рослини з усіх куточків планети та насолодитися прогулянкою серед природи.</p>
+                        <div class="place-meta">
+                            <span class="place-location"><i class="pin-icon">📍</i> вул. Черемшини, 44 </span>
+                            <a href="articles/botanical_garden.html" class="btn-details">ДЕТАЛІ →</a>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="place-card" data-category="Архітектура">
+                    <div class="main-info">
+                        <span class="place-category">Архітектура</span>
+                        <h2 class="place-title">Львівська Національна Опера</h2>
+                        <div class="place-img-wrapper">
+                            <img src="img/places_8.jpg" alt="Львівська опера">
+                        </div>
+                        <p class="place-excerpt">Архітектурна перлина Львова, одна з найгарніших оперних будівель у Європі.</p>
+                        <div class="place-meta">
+                            <span class="place-location"><i class="pin-icon">📍</i> просп. Свободи, 28</span>
+                            <a href="articles/opera.html" class="btn-details">ДЕТАЛІ →</a>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Мій Львів</div>
+            <p>Надихає на життя ближче до природи</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Мій Львів. Всі права захищені.</p>
+        </div>
+    </footer>
+
+	<script src="script.js"></script>
+</body>
+</html>

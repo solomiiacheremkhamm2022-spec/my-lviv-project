@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Львівський блог</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="img/logo.png" alt="Логотип Мій Львів" class="logo-img">
+            <span>Мій Львів</span>
+        </a>
+		</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="history.html">Історія Львова</a></li>
+				<li class="dropdown">
+					<a href="places.html">Цікаві місця</a>
+					<ul class="submenu">
+						<li><a href="places.html?category=Парки">Парки</a></li>
+						<li><a href="places.html?category=Заклади">Заклади</a></li>
+						<li><a href="places.html?category=Архітектура">Архітектура</a></li>
+					</ul>
+				</li>
+                <li><a href="about.html">Про нас</a></li>
+                <li class="dropdown">
+					<a href="gallery.html">Галерея</a>
+					<ul class="submenu">
+						<li><a href="gallery.html?category=photo">Фотографії</a></li>
+                        <li><a href="gallery.html?category=video">Відео</a></li>
+					</ul>
+				</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Львів, в який хочеться повернутися</h1>
+            <p>Львів - це місто, яке потрібно відчути. І я сподіваюся, що цей сайт стане вашим провідником у цьому процесі.</p>
+            <a href="#blog" class="btn">Читати блог</a>
+        </div>
+    </section>
+	
+
+    <main class="container" id="blog">
+        <div class="section-title">
+            <h2>Останні статті</h2>
+            <p>Ділюся тим, що бачу і відчуваю сама</p>
+        </div>
+
+        <div class="blog-grid">
+            <article class="post-card">
+                <div class="img-wrapper">
+                    <img src="img/places_2.jpg" alt="Дім Франка">
+                </div>
+                <div class="post-content">
+                    <span class="category">Архітектура</span>
+                    <h3>Дім Франка</h3>
+                    <p>Це місце, де розквітають магнолії та оживають слова, запрошуючи кожного в музей-садибу...</p>
+                    <a href="articles/franko.html" class="read-more">Читати далі →</a>
+                </div>
+            </article>
+			
+			<article class="post-card">
+                <div class="img-wrapper">
+                    <img src="img/history_1.jpg" alt="Створення">
+                </div>
+                <div class="post-content">
+                    <span class="category">Історія</span>
+                    <h3>Заснування Львова</h3>
+                    <p>Перша письмова згадка про місто датується 1256 роком. Дізнайтеся, як король Данило Галицький будував місто для свого сина Лева....</p>
+                    <a href="story/lviv.html" class="read-more">Читати далі →</a>
+                </div>
+            </article>
+            
+            <article class="post-card">
+                <div class="img-wrapper">
+                    <img src="img/places_7.jpg" alt="Ботанічний сад">
+                </div>
+                <div class="post-content">
+                    <span class="category">Парки</span>
+                    <h3>Ботанічний сад</h3>
+                    <p>Це мальовничий природний парк з екзотичними рослинами та оранжереями, що ідеально підходить для прогулянок, естетичних фотосесій....</p>
+                    <a href="articles/botanical_garden.html" class="read-more">Читати далі →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Мій Львів</div>
+            <p>Місто, що захоплює і надихає</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Мій Львів. Всі права захищені.</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

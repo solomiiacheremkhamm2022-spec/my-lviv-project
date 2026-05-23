@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дім Франка - Мій Львів</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Логотип Мій Львів" class="logo-img">
+                <span>Мій Львів</span>
+            </a>
+        </div>
+		 <nav>
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../history.html">Історія Львова</a></li>
+				<li class="../dropdown current-page">
+					<a href="../places.html">Цікаві місця</a>
+						<ul class="submenu">
+							<li><a href="../places.html?category=Парки">Парки</a></li>
+							<li><a href="../places.html?category=Заклади">Заклади</a></li>
+							<li><a href="../places.html?category=Архітектура">Архітектура</a></li>
+						</ul>
+				</li>
+                <li><a href="../about.html">Про нас</a></li>
+                <li class="../dropdown">
+					<a href="../gallery.html">Галерея</a>
+					<ul class="submenu">
+						<li><a href="../gallery.html?category=photo">Фотографії</a></li>
+                        <li><a href="../gallery.html?category=video">Відео</a></li>
+					</ul>
+				</li>
+            </ul>
+        </nav>
+    </header>
+
+  <main class="article-container">
+        
+        <aside class="article-visuals">
+            <div class="main-article-img">
+                <img src="../img/history_3.jpg" alt="Львів столиця Королівства Русі" class="main-img-click" id="main-view">
+            </div>
+            
+            <div id="article-lightbox" class="lightbox">
+                <span class="close-lightbox">&times;</span>
+                <div class="lightbox-wrapper">
+                    <button id="modal-prev" class="nav-arrow">❮</button>
+                    <img id="modal-img" class="lightbox-content" src="">
+                    <button id="modal-next" class="nav-arrow">❯</button>
+                    
+                    <div class="lightbox-caption">
+                        <h3 id="caption-title"></h3>
+                        <p id="caption-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:none;">
+                <img src="../img/history_3.jpg" class="thumb">
+            </div>      
+            
+            <div class="back-container">
+                <a href="../history.html" class="btn-back">← Назад до історії</a>
+            </div>
+        </aside>
+
+        <article class="article-content">
+            <span class="category">XIII - XIV століття</span>
+            <h1 class="article-title">Княжа доба: Столиця Галицько-Волинської держави</h1>
+            
+            <div class="article-text">
+                <p>
+                    У другій половині XIII століття Львів перетворився з прикордонної фортеці на політичний центр однієї з наймогутніших держав Східної Європи — <strong>Королівства Русі</strong> (Галицько-Волинської держави). Після занепаду Києва під ударами монголів, саме Львів став спадкоємцем державотворчих традицій Київської Русі.
+                </p>
+
+                <h3>Золотий вік за Лева Даниловича</h3>
+                <p>
+                    Хоча місто заснував король Данило, справжній розквіт як столиці припав на правління його сина — <strong>Лева I Даниловича</strong>. Близько 1272 року він переніс сюди столицю держави. Це рішення було продиктоване прагматизмом: Львів стояв на перетині "Шовкового шляху" та шляху "із варяг у греки", що забезпечувало шалені прибутки від мита та торгівлі.
+                </p>
+                <p>
+                    У цей період Львів став резиденцією монархів, де приймали іноземних послів, укладали міжнародні союзи та карбували власну монету. Місто було центром тяжіння для тогочасної інтелектуальної та духовної еліти.
+                </p>
+
+                <h3>Оборона та архітектура</h3>
+                <p>
+                    Як столиця, Львів мав відповідати найвищим стандартам безпеки. На вершині <strong>Високого Замку</strong> височіла цитадель — резиденція князя, де зберігалася корона, державна скарбниця та архів. Нижче, на території сучасного Підзамча, розташовувався "Нижній замок" та будинки боярської знаті.
+                </p>
+                <p>
+                    Львів того часу був справжнім "Вавилоном". Завдяки королівським привілеям тут мирно співіснували громади русинів, вірмен, німців та татар. Кожна громада мала свій квартал та храми, що заклало фундамент унікальної толерантності міста.
+                </p>
+
+                <h3>Занепад династії та спадщина</h3>
+                <p>
+                    Останнім правителем столиці з династії Романовичів був <strong>Юрій II Болеслав</strong>. Після його смерті у 1340 році почалася тривала боротьба за львівську спадщину між Польщею, Литвою та Угорщиною. Проте статус столиці Королівства Русі назавжди закарбував за Львовом роль головного міста Західної України.
+                </p>
+                
+                <p>
+                    Сьогодні про ті часи нагадують назви вулиць (Княжа, Лева), фундаменти найдавніших храмів та гордий лев на гербі — символ династії, що створила це місто як європейську столицю.
+                </p>
+            </div>
+        </article>
+    </main>
+	
+	
+     <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Мій Львів</div>
+            <p>Надихає на життя ближче до природи</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Мій Львів. Всі права захищені.</p>
+        </div>
+    </footer>
+
+	<script src="script.js"></script>
+	
+</body>
+</html>

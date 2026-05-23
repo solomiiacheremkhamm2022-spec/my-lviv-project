@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дім Франка - Мій Львів</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Логотип Мій Львів" class="logo-img">
+                <span>Мій Львів</span>
+            </a>
+        </div>
+		 <nav>
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../history.html">Історія Львова</a></li>
+				<li class="../dropdown current-page">
+					<a href="../places.html">Цікаві місця</a>
+						<ul class="submenu">
+							<li><a href="../places.html?category=Парки">Парки</a></li>
+							<li><a href="../places.html?category=Заклади">Заклади</a></li>
+							<li><a href="../places.html?category=Архітектура">Архітектура</a></li>
+						</ul>
+				</li>
+                <li><a href="../about.html">Про нас</a></li>
+                <li class="../dropdown">
+					<a href="../gallery.html">Галерея</a>
+					<ul class="submenu">
+						<li><a href="../gallery.html?category=photo">Фотографії</a></li>
+                        <li><a href="../gallery.html?category=video">Відео</a></li>
+					</ul>
+				</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="article-container">
+       <div class="article-visuals">
+    <div class="main-article-img">
+        <img src="../img/places_2.jpg" alt="Дім Франка" id="main-view" class="main-img-click">
+    </div>
+    
+    <div class="article-gallery-wrapper">
+        <button class="nav-arrow" id="prev-btn">◀</button>
+        <div class="mini-gallery" id="thumb-container">
+            <img src="../img/places_2.jpg" alt="фото 1" class="thumb active-thumb">
+            <img src="../img/places_3.jpg" alt="фото 2" class="thumb">
+            <img src="../img/places_4.jpg" alt="фото 3" class="thumb">
+        </div>
+        <button class="nav-arrow" id="next-btn">▶</button>
+    </div>
+	
+        <div class="back-container">
+			<a href="../places.html" class="btn-back">← Повернутися назад</a>
+		</div>
+</div>
+
+
+<div id="article-lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    
+    <button class="nav-arrow lightbox-prev" id="modal-prev">◀</button>
+    <button class="nav-arrow lightbox-next" id="modal-next">▶</button>
+
+    <div class="lightbox-wrapper">
+        <img class="lightbox-content" id="modal-img">
+        <div class="lightbox-caption">
+            <h3 id="caption-title"></h3>
+            <p id="caption-text"></p>
+        </div>
+    </div>
+</div>
+
+
+
+			<div class="article-content">
+				<h1 class="article-title">Дім Франка</h1>
+				<div class="article-text">
+                <p>Є у Львові один будинок, який я раджу відвідати кожному, хто цікавиться Львовом. Саме навесні він виглядає особлво атмосферно!</p>
+                <p>На вулиці Івана Франка під номерм 150/152 розташований будинок, у якому знаходиться Львівський національний літературно-меморіальний музей Івана Франка. Ця колишня власна вілла письменника розташована в районі Стрийського парку. Саме тут Іван Франко мешкав у 1902-1916 роках.</p>
+				<p>Архітектура будинку позбавлена надмірної розкоші, оскільки вона проєктувалася як родинне гніздо з просторими вікнами та дерев'яними верандами.</p>
+				<p>Біля підніжжя Дому Франка навесні спостерігається справжнє природне диво, бо музей прикрашають розкішні дерева магнолій. Їх цвітіння створює навколо будинка атмосферу піднесеного спокою.</p>
+				<p>Експозиція музею детально відтворює побут родини Франків, демонструючи особисті речі, робочий кабінет та величезну бібліотеку автора. Це місце, де кожен куточок дихає історією та літературою.</p>
+                <p>Сьогодні Дім Франка - це сучасний культурний простір, де проходять виставки, лекції та творчі вечори, об'єднуючи навколо себе поціновувачів української культури.</p>
+				<p>Цвітіння магнолій залишає у пам'яті теплий відбиток, перетворюючи екскурсію на справжню естетичну насолоду.</p>
+				<p>Кожної весни мене, неначе тягне туди, в ту затишну будівлю, де все дихає духом родини Франків, заквітчану дивовижними біло - рожевими квітами. Хоча одного року я побувала тут восени і також була вражена розмаїттям кольорів листя на деревах, які підсилювали  загальну атмосферу цього музею. </p>
+				<p>Раджу кожному, хто хоче відчути особливу атмосферу  Львова відвідати вперше це місце навесні. Гадаю, воно нікого не залишить байдужим!</p>
+			</div>
+			</div>
+
+    </main>
+
+
+
+<section class="full-width-map">
+        <div class="map-container-inner">
+            <h2 class="map-heading">Місцезнаходження: Дім Франка</h2>
+            <p class="map-address">м. Львів, вул. Івана Франка, 150/152</p>
+        </div>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.955431670933!2d24.03212137685816!3d49.82451363223018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6607e4d58f%3A0x6b447605d3369a4c!2z0JTRltC8INCk0YDQsNC90LrQsA!5e0!3m2!1suk!2sua!4v1715415000000!5m2!1suk!2sua" 
+            width="100%" 
+            height="450" 
+            style="border:0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+     <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Мій Львів</div>
+            <p>Надихає на життя ближче до природи</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Мій Львів. Всі права захищені.</p>
+        </div>
+    </footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
