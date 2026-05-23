@@ -104,3 +104,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const dropdownLink = document.querySelector('.dropdown > a'); // Посилання "Цікаві місця"
+    const submenu = document.querySelector('.submenu');
+
+    // Відкриття/закриття головного мобільного меню
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('open');
+            
+            // Якщо закриваємо головне меню, то закриваємо й підменю теж
+            if (!nav.classList.contains('open') && submenu) {
+                submenu.classList.remove('open-submenu');
+            }
+        });
+    }
+
+    // Робота з підменю на мобільних пристроях
+    if (dropdownLink && submenu) {
+        dropdownLink.addEventListener('click', function(e) {
+            // Спрацьовує лише на мобільних екранах (менше 769px)
+            if (window.innerWidth <= 768) {
+                e.preventDefault(); // Скасовуємо перехід за посиланням, якщо воно є
+                submenu.classList.toggle('open-submenu');
+            }
+        });
+    }
+});
